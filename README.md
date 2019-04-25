@@ -1,3 +1,16 @@
-# pioxy
+# Pioxy
+Written by: Ben Tsardoulias (TIBTHINK)
 
-this is just a proof of concept if you want to help follow these 
+## Supported platforms
+
+* Raspbain (Raspsberry pi's)
+(ment for pi's (hint its in the title)
+
+# setup
+
+```bash
+ git clone https://github.com/TIBTHINK/pioxy
+ cd pioxy
+ sudo python3 menu.py
+
+ 
