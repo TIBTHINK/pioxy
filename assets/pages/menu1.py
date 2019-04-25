@@ -1,5 +1,9 @@
 import os
 from time import sleep
+import random
+
+import os
+from time import sleep
 import platform
 import sys
 
@@ -40,37 +44,21 @@ logo2 = ("""
 if os.geteuid() != 0:
     exit("You need to have root privileges to run this script.\nPlease try again, Run 'sudo !!' and run the script.\nExiting.")
 os.system("clear")
-print(logo)
-print()
 
 
 ans=True
 while ans:
     print()
+    print(logo)
     print ("""
-    1.Update the PI
-    2.Check for updates
-    3.Proxy
-    4.Exit
+    1.Start Proxy server
+    2.Go back
     """)
     ans=input("What would you like to do? ")
     if ans=="1":
-      os.system("apt-get update && apt-get upgrade -y")
-      sleep(1)
-      os.system("clear")
+      os.system("python3 assets/packages/proxy.py")
       print(logo2)
-    elif ans=="2":
-      print("\n in the workings come back later")
-      sleep(2)
-      os.system("clear")
-      print(logo2)
-    elif ans=="3":
-      os.system("clear")
-      sleep(1)
-      os.system("python3 assets/pages/menu1.py")
-    elif ans=="4":
-      print("\n Exiting, Thanks for the visit")
-      sleep(2)
+    if ans=="2":
       os.system("clear")
       sys.exit()
     elif ans !="":
